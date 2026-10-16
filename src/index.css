@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..900&family=Bebas+Neue&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #101313; background: #f4f0e7; font-family: "Archivo", sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.display { font-family: "Bebas Neue", sans-serif; }
+.grid-paper { background-image: linear-gradient(rgba(16,19,19,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(16,19,19,.08) 1px, transparent 1px); background-size: 24px 24px; }
+.stroke-text { color: transparent; -webkit-text-stroke: 1px #101313; }
+.marquee-track { animation: marquee 24s linear infinite; }
+.truck { animation: drive 7s ease-in-out infinite; }
+.lift { animation: lift 2.8s ease-in-out infinite; transform-origin: 80% 90%; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes drive { 0%,100% { transform: translateX(-2%); } 50% { transform: translateX(10%); } }
+@keyframes lift { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-8deg); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .marquee-track, .truck, .lift { animation: none; } }
